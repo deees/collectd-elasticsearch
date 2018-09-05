@@ -1107,7 +1107,7 @@ class Cluster(object):
         log.info('Sending value[%s]: %s=%s' % (estype, name, value))
 
         val = collectd.Values(plugin='elasticsearch')
-        val.plugin_instance = self.es_cluster
+        val.plugin_instance = str(self.es_port)
 
         # If dimensions are provided, format them and append
         # them to the plugin_instance
