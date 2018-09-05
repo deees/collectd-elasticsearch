@@ -1113,7 +1113,7 @@ class Cluster(object):
         # them to the plugin_instance
         dim_str = self.get_dimension_string(dimensions)
         if dim_str:
-            val.plugin_instance += '[{dims}]'.format(dims=dim_str)
+            val.plugin_instance += '-{dims}'.format(dims=dim_str)
 
         val.type = estype
         val.type_instance = name
@@ -1125,7 +1125,7 @@ class Cluster(object):
     def get_dimension_string(self, dimensions):
         dim_str = ''
         if dimensions:
-            dim_str = ','.join(['='.join(d) for d in dimensions.items()])
+            dim_str = ','.join(['-'.join(d) for d in dimensions.items()])
 
         if self.extra_dimensions:
             dim_str += "%s%s" % (',' if dim_str else '', self.extra_dimensions)
