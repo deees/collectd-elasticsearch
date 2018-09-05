@@ -1299,6 +1299,7 @@ def configure_test(cluster):
     cluster.enable_index_stats = True
     cluster.enable_cluster_stats = True
     cluster.es_master_eligible = True
+    cluster.es_index_separate_graph = True
 
 
 if __name__ == '__main__':
