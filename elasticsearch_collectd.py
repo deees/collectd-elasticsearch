@@ -227,7 +227,7 @@ NODE_STATS = {
 
     # UPTIME
     'jvm.uptime':
-        Stat("counter", "nodes.%s.jvm.uptime_in_millis"),
+        Stat("gauge", "nodes.%s.jvm.uptime_in_millis"),
 
     # THREADS
     'jvm.threads.count':
