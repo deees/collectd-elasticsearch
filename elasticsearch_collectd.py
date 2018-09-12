@@ -653,14 +653,14 @@ INDEX_STATS = {
         Stat("gauge", "total.query_cache.cache_size"),
 
     # REQUEST CACHE
-    "indices[index={index_name}].primaries.request-cache.memory-size":
-        Stat("gauge", "primaries.request_cache.memory_size_in_bytes"),
-    "indices[index={index_name}].primaries.request-cache.evictions":
-        Stat("counter", "primaries.request_cache.evictions"),
-    "indices[index={index_name}].primaries.request-cache.hit-count":
-        Stat("counter", "primaries.request_cache.hit_count"),
-    "indices[index={index_name}].primaries.request-cache.miss-count":
-        Stat("counter", "primaries.request_cache.miss_count"),
+    "indices[index={index_name}].total.request-cache.memory-size":
+        Stat("gauge", "total.request_cache.memory_size_in_bytes"),
+    "indices[index={index_name}].total.request-cache.evictions":
+        Stat("counter", "total.request_cache.evictions"),
+    "indices[index={index_name}].total.request-cache.hit-count":
+        Stat("counter", "total.request_cache.hit_count"),
+    "indices[index={index_name}].total.request-cache.miss-count":
+        Stat("counter", "total.request_cache.miss_count"),
 
 }
 
